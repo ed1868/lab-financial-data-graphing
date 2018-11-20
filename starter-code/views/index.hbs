@@ -7,9 +7,24 @@
 </head>
 
 <body>
-    <h1>BitCoins Dashboard</h1>
-    <canvas id="myChart" width="400" height="200px"></canvas>
-    <button id="btn-bitcoin">Get Bitcoins Data</button>
+    <h1 id="title">BitCoins Dashboard</h1>
+    <div id="container">
+        <h3>Bitcoins Graph</h3>
+        <button id="btn-bitcoin">Get Bitcoins Data</button>
+        <h3>Filters</h3>
+        <input type="date" name="date-from" id="date-from">
+        <input type="date" name="date-to" id="date-to">
+        <h3>Currency</h3>
+        <select name="currency" id="currency-selector">
+            <option name="usd">USD</option>
+            <option name="eur">EUR</option>
+        </select>
+        <h3>Values</h3>
+        <p>Max: <span id="max"></span></p>
+        <p>Mix: <span id="min"></span></p>
+    </div>
+    <canvas id="myChart" width="400" height="180px"></canvas>
+
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="/javascripts/financial-data.js" charset="utf-8"></script>
